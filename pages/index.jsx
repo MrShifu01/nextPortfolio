@@ -18,24 +18,153 @@ const index = () => {
           <h2 style={{ opacity: 0.3 }}>Node js</h2>
           <h2 style={{ opacity: 0.25 }}>Next JS</h2>
         </div>
-        <div></div>
+        
+        <div className='buttons-container'>
+          <img className='arrow' src='/static/arrow.svg' alt='arrow'/>
+          <button className='projects-button'>projects</button>
+        </div>
         <div>
           <img className='bamboo' src='/static/bamboo.png' alt='bamboo tree'/>
+
         </div>
       </div>
+  
+      
       
 
        <style jsx>{`
           @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
           .index-container {
-            display:flex;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
             justify-content: space-between;
+          }
+
+          .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            justify-content: end;
+            align-items: center;
+            margin-bottom: 3rem;
+          }
+
+          .arrow {
+            width: 10px;
+            opacity: 0.6;
+            -webkit-animation: bounce-in-top 2s 5s both;
+            animation: bounce-in-top 2s 5s both;
+          }
+
+          @-webkit-keyframes bounce-in-top {
+            0% {
+              -webkit-transform: translateY(-500px);
+                      transform: translateY(-500px);
+              -webkit-animation-timing-function: ease-in;
+                      animation-timing-function: ease-in;
+              opacity: 0;
+            }
+            38% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+              -webkit-animation-timing-function: ease-out;
+                      animation-timing-function: ease-out;
+              opacity: 1;
+            }
+            55% {
+              -webkit-transform: translateY(-65px);
+                      transform: translateY(-65px);
+              -webkit-animation-timing-function: ease-in;
+                      animation-timing-function: ease-in;
+            }
+            72% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+              -webkit-animation-timing-function: ease-out;
+                      animation-timing-function: ease-out;
+            }
+            81% {
+              -webkit-transform: translateY(-28px);
+                      transform: translateY(-28px);
+              -webkit-animation-timing-function: ease-in;
+                      animation-timing-function: ease-in;
+            }
+            90% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+              -webkit-animation-timing-function: ease-out;
+                      animation-timing-function: ease-out;
+            }
+            95% {
+              -webkit-transform: translateY(-8px);
+                      transform: translateY(-8px);
+              -webkit-animation-timing-function: ease-in;
+                      animation-timing-function: ease-in;
+            }
+            100% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+              -webkit-animation-timing-function: ease-out;
+                      animation-timing-function: ease-out;
+            }
+          }
+          @keyframes bounce-in-top {
+            0% {
+              -webkit-transform: translateY(-500px);
+                      transform: translateY(-500px);
+              -webkit-animation-timing-function: ease-in;
+                      animation-timing-function: ease-in;
+              opacity: 0;
+            }
+            38% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+              -webkit-animation-timing-function: ease-out;
+                      animation-timing-function: ease-out;
+              opacity: 1;
+            }
+            55% {
+              -webkit-transform: translateY(-65px);
+                      transform: translateY(-65px);
+              -webkit-animation-timing-function: ease-in;
+                      animation-timing-function: ease-in;
+            }
+            72% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+              -webkit-animation-timing-function: ease-out;
+                      animation-timing-function: ease-out;
+            }
+            81% {
+              -webkit-transform: translateY(-28px);
+                      transform: translateY(-28px);
+              -webkit-animation-timing-function: ease-in;
+                      animation-timing-function: ease-in;
+            }
+            90% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+              -webkit-animation-timing-function: ease-out;
+                      animation-timing-function: ease-out;
+            }
+            95% {
+              -webkit-transform: translateY(-8px);
+                      transform: translateY(-8px);
+              -webkit-animation-timing-function: ease-in;
+                      animation-timing-function: ease-in;
+            }
+            100% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+              -webkit-animation-timing-function: ease-out;
+                      animation-timing-function: ease-out;
+            }
           }
 
           .bamboo {
             width: 200px;
-            transform: translate(-50%, 8.9%);
+            transform: translate(90%, 8.9%);
             -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0), rgba(0,0,0,0));
           }
 
@@ -51,6 +180,27 @@ const index = () => {
           h1 {
             -webkit-animation: text-flicker-in-glow 4s ease-in 1s both;
             animation: text-flicker-in-glow 4s ease-in 1s both;
+          }
+
+          .projects-button {
+            background-color:#3C4F38;
+            color: rgba(255,255,255,0.7);
+            font-size: 1.5rem;
+            padding: 0 1rem;
+            height: 60px;
+            width: 150px;
+            border-color: rgba(255,255,255,0.5);
+            border-radius: 25px;
+            box-shadow: 0 0 20px 10px;
+            opacity: 0.9;
+            outline:none;
+          }
+
+          .projects-button:hover {
+            font-size:1.6rem;
+            height: 63px;
+            width: 160px;
+            opacity: 1;
           }
 
           @-webkit-keyframes text-flicker-in-glow {

@@ -9,6 +9,9 @@ h2 {
 
 li {
     list-style-type: none;
+    
+    align-items: ;
+    grid-template-columns: repeat(3, 1fr);
     text-decoration: none;
     color: black;
     aspect-ratio: 5/1;
