@@ -1,5 +1,7 @@
 import React from 'react'
 
+// Basisc Footer
+// Styled to be at the bottom in the middle
 const Footer = () => {
     const date = new Date().getFullYear()
 

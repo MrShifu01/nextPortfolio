@@ -3,9 +3,11 @@ import Layout from '../components/Layout'
 
 const index = () => {
   return (
+    // Wrapped in Layout for global style
     <Layout>
       <div className='index-container'>
         <div>
+          {/* Design and Name titles */}
           <h2 style={{ opacity: 0.4 }}>UI/UX Design</h2>
           <h2 style={{ opacity: 0.6 }}>Frontend Development</h2>
           <h1 style={{color: 'white', fontSize: "3rem"}}><strong>Christian Stander</strong></h1>
@@ -19,28 +21,33 @@ const index = () => {
           <h2 style={{ opacity: 0.25 }}>Next JS</h2>
         </div>
         
+        {/* Button to the projects page */}
         <div className='buttons-container'>
+
+          {/* Animated Arrow pointing to the button */}
           <img className='arrow' src='/static/arrow.svg' alt='arrow'/>
           <Link href='/projects'><button className='projects-button'>Projects</button></Link>
         </div>
+
+        {/* Hero section image of a bamboo tree */}
         <div>
           <img className='bamboo' src='/static/bamboo.png' alt='bamboo tree'/>
-
         </div>
       </div>
   
-      
-      
-
+      {/* CSS Styles using styled-jsx */}
        <style jsx>{`
+      //  Importing a google font
           @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+          // styling the page container
           .index-container {
             display:grid;
             grid-template-columns: repeat(3, 1fr);
             justify-content: space-between;
           }
 
+          // Aligning the button container
           .buttons-container {
             display: flex;
             flex-direction: column;
@@ -50,6 +57,7 @@ const index = () => {
             margin-bottom: 3rem;
           }
 
+          // Styling the animated Arrow
           .arrow {
             width: 10px;
             opacity: 0.6;
@@ -57,6 +65,7 @@ const index = () => {
             animation: bounce-in-top 2s 5s both;
           }
 
+          // Arrow Animation
           @-webkit-keyframes bounce-in-top {
             0% {
               -webkit-transform: translateY(-500px);
@@ -162,12 +171,14 @@ const index = () => {
             }
           }
 
+          // Styling the Bamboo tree image
           .bamboo {
             width: 200px;
             transform: translate(90%, 8.9%);
             -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0), rgba(0,0,0,0));
           }
 
+          // Styling the Titles
           h2, h1 {
             font-family: "Oswald", sans-serif;
             text-transform: uppercase;
@@ -182,6 +193,7 @@ const index = () => {
             animation: text-flicker-in-glow 4s ease-in 1s both;
           }
 
+          // Styling the Button
           .projects-button {
             background-color:#3C4F38;
             color: rgba(255,255,255,0.7);
@@ -203,6 +215,7 @@ const index = () => {
             opacity: 1;
           }
 
+          // Animation for the h1 title 'Christian Stander"
           @-webkit-keyframes text-flicker-in-glow {
             0% {
               opacity: 0;
@@ -578,8 +591,6 @@ const index = () => {
               text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
             }
           }
-
-          
        `}</style>
     </Layout>
   )
