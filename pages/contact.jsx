@@ -15,6 +15,8 @@ const contact = () => {
             <p>
               Let's discuss a project you have in mind, perhaps a position you think I'd be a good fit for or just to chat about web development.
             </p>
+            <p>christian@email.com</p>
+            <p>+2763 123 1234</p>
           </div>
 
           {/* Social links */}
