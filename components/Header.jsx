@@ -1,6 +1,9 @@
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 const Header = () => {
+  const router = useRouter()
+
   return (
     <div>
 
@@ -9,9 +12,11 @@ const Header = () => {
                 <Link href="/">portfol.io</Link>
               </h2>
               <ul>
-                <li><Link href="/about">about</Link></li>
-                <li><Link href="/projects">projects</Link></li>
-                <li><Link href="/contact">contact</Link></li>
+              <Link href="/about"><li style={{color: router.route === '/about' ? "#3C4F38" : "black"}}>About</li></Link>
+              <Link href="/projects"><li style={{color: router.route === '/projects' ? "#3C4F38" : "black"}}>Projects</li></Link>
+              <Link href="/contact"><li style={{color: router.route === '/contact' ? "#3C4F38" : "black"}}>Contact</li></Link>
+              <Link href="https://interactive-cv-mrshifu01.vercel.app/" target="_blank"><button className="cv-button">CV</button></Link>
+
               </ul>
             </nav>
 
@@ -46,6 +51,22 @@ const Header = () => {
               color: #000;
               opacity: 0.6
             }
+
+            .cv-button {
+              background-color:#3C4F38;
+              color: rgba(255,255,255,0.7);
+              padding: 0 1rem;
+              border-color: rgba(255,255,255,0.5);
+              border-radius: 25px;
+              box-shadow: 0 0 20px 10px;
+              opacity: 0.9;
+              outline:none;
+            }
+  
+            .cv-button:hover {
+              opacity: 1;
+            }
+
           `}</style> 
     </div>
   )

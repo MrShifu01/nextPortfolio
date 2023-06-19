@@ -21,7 +21,7 @@ const index = () => {
         
         <div className='buttons-container'>
           <img className='arrow' src='/static/arrow.svg' alt='arrow'/>
-          <button className='projects-button'>projects</button>
+          <Link href='/projects'><button className='projects-button'>Projects</button></Link>
         </div>
         <div>
           <img className='bamboo' src='/static/bamboo.png' alt='bamboo tree'/>

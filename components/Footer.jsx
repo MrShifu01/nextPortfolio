@@ -12,6 +12,7 @@ const Footer = () => {
                     font-size: 1rem;
                     opacity: 0.5;
                     text-align: center;
+                    margin-top: 2rem;
                 }
             `}
         </style>
